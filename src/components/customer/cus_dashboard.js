@@ -1,7 +1,7 @@
 // import './cus_dashboard.css';
 // import Sidebar from './Sidebar';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import Main from './main';
+import Main from './Main.js';
 import MyAccount from './accounts';
 import Bookings from './bookings';
 import Reviews from './reviews';
