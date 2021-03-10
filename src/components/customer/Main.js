@@ -1,17 +1,24 @@
-import React, { Component } from 'react';
-import TopAll from './TopAll';
-import OverviewBar from "./OverviewBar";
-import OverviewMain from "./OverviewMain";
-import './Main.css';
+import React, { Component } from 'react'
+import Navbar from './navbar'
+import OverviewBar from './OverviewBar'
+import { makeStyles } from '@material-ui/core'
 
-export default class Main extends Component {
-    render() {
-        return (
-            <div className='Main'>
-                <TopAll value='Welcome to our Portal' name='Taimur' />
-                <OverviewBar />
-                <OverviewMain />
-            </div>
-        )
+const useStyles = makeStyles({
+    cent: {
+        display: 'flex', 
+        justifyContent:'center',
+        alignItems:'center'
     }
+});
+
+const Main = () => {
+    const classes = useStyles();
+    return (
+        <div>
+            <Navbar />
+            <h1 className={classes.cent} >Welcome to KHOJ</h1>
+            <OverviewBar />
+        </div>
+    )
 }
+export default Main

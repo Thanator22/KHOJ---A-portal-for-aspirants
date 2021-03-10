@@ -1,29 +1,23 @@
-import './cus_dashboard.css';
-import Sidebar from './Sidebar';
-import Main from './Main';
-import Profile from './Profile';
-import Search from './Search';
-import Account from './Account';
-import Setting from './Setting';
-
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
-
-
+// import './cus_dashboard.css';
+// import Sidebar from './Sidebar';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import Main from './main';
+import MyAccount from './accounts';
+import Bookings from './bookings';
+import Reviews from './reviews';
 
 function cus_dashboard() {
   return (
     <div className="cus_dashboard">
-      <Router>
-        <Sidebar />
+      <BrowserRouter>
+        {/* <Sidebar /> */}
         <Switch>
-          <Route path='/dashboard/overview' exact component={Main} />
-          <Route path='/dashboard/profile' component={Profile} />
-          <Route path='/dashboard/search' component={Search} />
-          <Route path='/dashboard/account' component={Account} />
-          <Route path='/dashboard/setting' component={Setting} />
+          <Route path='/dashboard/bookings' component={Bookings} />
+          <Route path='/dashboard/reviews' component={Reviews} />
+          <Route path='/dashboard/account' component={MyAccount} />
+          <Route path='/dashboard' component={Main} />
         </Switch>
-      </Router>
+      </BrowserRouter>
     </div>
   );
 }
