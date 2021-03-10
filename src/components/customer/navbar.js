@@ -1,6 +1,5 @@
 import React from 'react'
 import { AppBar, Toolbar, IconButton, List, ListItem, ListItemText, makeStyles, Container, Hidden, Grid } from '@material-ui/core'
-import { Home } from "@material-ui/icons"
 import { Link } from 'react-router-dom';
 import SideDrawer from "./sideDrawer"
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
@@ -57,7 +56,7 @@ const Navbar = () => {
                             </ListItem>
                         </Link>
                         ))}
-                        <Link to='/login' key='Login' className={classes.linkText} >
+                        <Link to='/login' className={classes.linkText} >
                             <ListItem button>
                                 <ExitToAppIcon />
                                 <ListItemText primary="Sign out" />
